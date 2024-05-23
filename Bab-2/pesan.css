@@ -1,0 +1,104 @@
+body {
+    font-family: Arial;
+    background-image: url('aset/Bg2.png') ;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+li {
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="jenis"],
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+@media screen and (max-width: 1024px) {
+    nav .mobile_menu_btn i{
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 120px;
+        left: -100%;
+        background-color: #ffffff;
+        width: 100%;
+        height: 100vh;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease-in;
+        z-index: 999; /* Menambahkan z-index untuk membuat menu mobile tampil di atas elemen lain */
+    }
+    
+    #click:checked ~ ul {
+        left: 0%;
+    }
+    
+    #click:checked ~ .mobile_menu_btn i::before {
+        content: "\f00d";
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 3rem 0;
+    }
+    
+
+    .wrapper{
+        width: 90%;
+    }
+
+    .container{
+        flex-direction: column-reverse;
+    }
+
+    .container .coffee_image img{
+        width: 80%;
+    }
+}
